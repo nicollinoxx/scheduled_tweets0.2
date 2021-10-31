@@ -1,0 +1,30 @@
+{
+	"folders": {},
+	"connections": {
+		"sqlite_jdbc-17c8c5c4fef-19e24b4f5b63e34b": {
+			"provider": "sqlite",
+			"driver": "sqlite_jdbc",
+			"name": "development.sqlite3",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"database": "/home/nicolas/scheduled_tweets0.2/db/development.sqlite3",
+				"url": "jdbc:sqlite:/home/nicolas/scheduled_tweets0.2/db/development.sqlite3",
+				"type": "dev",
+				"auth-model": "native",
+				"handlers": {}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	}
+}

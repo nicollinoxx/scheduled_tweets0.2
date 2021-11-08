@@ -19,8 +19,4 @@
     </div>
   </div>
   <%= form.submit 'Scheduled', class: 'btn btn-primary' %>
-
-  <% if form.object.persisted? %>
-   <%= link_to 'Deleted', form.object, method: :delete, data: {confirm: 'Are you sure?' }, class: 'btn btn-outline-danger' %>
-  <% end %>
 <% end %>

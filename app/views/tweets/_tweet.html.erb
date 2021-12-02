@@ -1,4 +1,4 @@
-<div class='mb-3 card card-body'>
+<div class='mb-3 card'>
   <div class="me-4">
     <%= image_tag tweet.twitter_account.image, class: 'rounded-circle' %>
     <%= link_to tweet.twitter_account.username, 'http://twitter.com/#{tweet.twitter_account.username}', target: :_blank %>
@@ -6,9 +6,13 @@
       <%= link_to 'View Tweet', 'http://twitter.com/#{tweet.twitter_account.username}/status/#{tweet.tweet_id}', target: :_blank %>
     <% else %>
       Scheduled for <%= l tweet.publish_at, format: :short%>
-      <%= link_to 'Edit Tweet', edit_tweet_path(tweet) %>
+      <%= link_to 'Edit Tweet', edit_tweet_path(tweet)%>
     <% end %><br>
-    <%= tweet.body %>
-    <%= button_to 'Deleted', tweet, method: :delete, data: {confirm: 'Are you sure?' }, class: 'btn btn-primary' %>
+      <%= tweet.body %>
+    <% if tweet.published? %>
+      <%= button_to 'Deleted', tweet, method: :delete, data: {confirm: "Are you sure? You will not be able to find the tweet posted on twitter through the site."}, class: 'bg-primary' %>
+    <% else %>
+      <%= button_to 'Deleted', tweet, method: :delete, data: {confirm: 'Are you sure?' }, class: 'bg-primary' %>
+    <% end %>
   </div>
 </div>

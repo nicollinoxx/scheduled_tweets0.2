@@ -10,6 +10,6 @@
      <%= image_tag twitter_account.image, class: 'rounded-circle' %>
      <%= link_to twitter_account.username, 'http://twitter.com/#{twitter_account.username}', target: :_blank %>
    </div>
-    <%= button_to 'Disconnected', twitter_account, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-warning'%>
+    <%= button_to 'Disconnected', twitter_account, method: :delete, data: { confirm: "Are you sure? Make sure you don't have tweets scheduled or posted" }, class: 'btn btn-warning'%>
  </div>
 <% end %>

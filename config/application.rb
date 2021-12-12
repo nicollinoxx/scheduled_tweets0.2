@@ -9,6 +9,7 @@ Bundler.require(*Rails.groups)
 module ScheduledTweets02
   class Application < Rails::Application
     config.load_defaults 6.1
+    config.time_zone = 'Brasilia'
     # Initialize configuration defaults for originally generated Rails version.
     # Configuration for the application, engines, and railties goes here.
     #

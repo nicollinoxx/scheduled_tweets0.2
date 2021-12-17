@@ -1,7 +1,7 @@
 <div class="d-flex align-items-center justify-content-between">
 <h1>Twitter Accounts</h1>
   <% if @twitter_accounts.none? %>
-   <%= link_to'Connect your Twitter Accounts', '/auth/twitter', method: :post, class: 'btn btn-warning' %>
+   <%= button_to 'Connect your Twitter Accounts', '/auth/twitter', method: :post, class: 'btn btn-warning' %>
   <% end %>
 </div>
 <% @twitter_accounts.each do |twitter_account| %>
